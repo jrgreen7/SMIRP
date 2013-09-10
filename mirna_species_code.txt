@@ -1,0 +1,193 @@
+ssc:Sus scrofa
+tcc:Theobroma cacao
+oan:Ornithorhynchus anatinus
+ppt:Physcomitrella patens
+lca:Lemur catta
+ccr:Cyprinus carpio
+ptc:Populus trichocarpa
+tae:Triticum aestivum
+gpy:Glottidia pyramidata
+cpa:Carica papaya
+dvi:Drosophila virilis
+dse:Drosophila sechellia
+sv4:Simian virus 40
+pma:Petromyzon marinus
+hpa:Helianthus paradoxus
+cca:Cynara cardunculus
+mgh:Mouse gammaherpesvirus 68
+ccl:Citrus clementine
+rno:Rattus norvegicus
+hvu:Hordeum vulgare
+ath:Arabidopsis thaliana
+lla:Lagothrix lagotricha
+pab:Picea abies
+asu:Ascaris suum
+bol:Brassica oleracea
+ppc:Pristionchus pacificus
+bcy:Bruguiera cylindrica
+pvu:Phaseolus vulgaris
+gra:Gossypium raimondii
+dre:Danio rerio
+ata:Aegilops tauschii
+bma:Brugia malayi
+sly:Solanum lycopersicum
+gar:Gossypium arboreum
+dps:Drosophila pseudoobscura
+dpe:Drosophila persimilis
+rlc:Rhesus lymphocryptovirus
+ksh:Kaposi sarcoma-associated herpesvirus
+lgi:Lottia gigantea
+xla:Xenopus laevis
+crm:Caenorhabditis remanei
+vvi:Vitis vinifera
+ghb:Gossypium herbaceum
+aae:Aedes aegypti
+aqu:Amphimedon queenslandica
+aly:Arabidopsis lyrata
+cgr:Cricetulus griseus
+bna:Brassica napus
+smr:Strigamia maritima
+nta:Nicotiana tabacum
+ppy:Pongo pygmaeus
+ggo:Gorilla gorilla
+hpe:Helianthus petiolaris
+bhv:Bovine herpesvirus 1
+ame:Apis mellifera
+mtr:Medicago truncatula
+dme:Drosophila melanogaster
+csa:Ciona savignyi
+ahy:Arachis hypogaea
+hiv:Human immunodeficiency virus 1
+gso:Glycine soja
+sma:Schistosoma mansoni
+smo:Selaginella moellendorffii
+hex:Helianthus exilis
+gga:Gallus gallus
+hvt:Herpesvirus of turkeys
+aga:Anopheles gambiae
+ddi:Dictyostelium discoideum
+cfa:Canis familiaris
+spu:Strongylocentrotus purpuratus
+bmo:Bombyx mori
+hru:Haliotis rufescens
+mdm:Malus domestica
+htu:Helianthus tuberosus
+sha:Sarcophilus harrisii
+xbo:Xenoturbella bocki
+hci:Helianthus ciliaris
+sja:Schistosoma japonicum
+mcm:Mouse cytomegalovirus
+dan:Drosophila ananassae
+isc:Ixodes scapularis
+ctr:Citrus trifoliata
+gma:Glycine max
+mdv:Mareks disease virus
+vun:Vigna unguiculata
+hme:Heliconius melpomene
+ppa:Pan paniscus
+egu:Elaeis guineensis
+rmi:Rhipicephalus microplus
+fru:Fugu rubripes
+mja:Marsupenaeus japonicus
+bra:Brassica rapa
+nve:Nematostella vectensis
+ptr:Pan troglodytes
+csi:Citrus sinensis
+hhi:Hippoglossus hippoglossus
+pbi:Pygathrix bieti
+mml:Macaca mulatta
+dpr:Digitalis purpurea
+ttu:Triticum turgidum
+aca:Anolis carolinensis
+pde:Pinus densata
+aqc:Aquilegia caerulea
+ilt:Infectious laryngotracheitis virus
+har:Helianthus argophyllus
+cin:Ciona intestinalis
+amg:Acacia mangium
+peu:Populus euphratica
+bpc:Bandicoot papillomatosis carcinomatosis virus type 2
+blv:Bovine leukemia virus
+tgu:Taeniopygia guttata
+bkv:BK polyomavirus
+sme:Schmidtea mediterranea
+pta:Pinus taeda
+lmi:Locusta migratoria
+ssp:Saccharum ssp.
+hbv:Herpes B virus
+age:Ateles geoffroyi
+esi:Ectocarpus siliculosus
+osa:Oryza sativa
+han:Helianthus annuus
+api:Acyrthosiphon pisum
+hsv:Herpes Simplex Virus 2
+hsv:Herpes Simplex Virus 1
+mcv:Merkel cell polyomavirus
+far:Festuca arundinacea
+bdi:Brachypodium distachyon
+bta:Bos taurus
+sko:Saccoglossus kowalevskii
+hhv:Human herpesvirus 6B
+hco:Haemonchus contortus
+sbi:Sorghum bicolor
+cte:Capitella teleta
+der:Drosophila erecta
+ssl:Salvia sclarea
+nvi:Nasonia vitripennis
+hcm:Human cytomegalovirus
+ghr:Gossypium hirsutum
+mdv:Mareks disease virus type 2
+rgl:Rehmannia glutinosa
+bgy:Bruguiera gymnorhiza
+eca:Equus caballus
+tni:Tetraodon nigroviridis
+meu:Macropus eugenii
+zma:Zea mays
+lja:Lotus japonicus
+cme:Cucumis melo
+hbr:Hevea brasiliensis
+dya:Drosophila yakuba
+ssy:Symphalangus syndactylus
+hvs:Herpesvirus saimiri strain A11
+xtr:Xenopus tropicalis
+cqu:Culex quinquefasciatus
+sla:Saguinus labiatus
+cbr:Caenorhabditis briggsae
+emu:Echinococcus multilocularis
+dsi:Drosophila simulans
+jcv:JC polyomavirus
+hsa:Homo sapiens
+sof:Saccharum officinarum
+dwi:Drosophila willistoni
+prv:Pseudorabies virus
+crt:Citrus reticulata
+cel:Caenorhabditis elegans
+bfl:Branchiostoma floridae
+mdo:Monodelphis domestica
+tre:Terebratulina retusa
+cre:Chlamydomonas reinhardtii
+bpc:Bandicoot papillomatosis carcinomatosis virus type 1
+mes:Manihot esculenta
+tca:Tribolium castaneum
+mne:Macaca nemestrina
+stu:Solanum tuberosum
+dpu:Daphnia pulex
+cla:Cerebratulus lacteus
+dgr:Drosophila grimshawi
+ebv:Epstein Barr virus
+mse:Manduca sexta
+ngi:Nasonia giraulti
+rco:Ricinus communis
+tur:Tetranychus urticae
+rrv:Rhesus monkey rhadinovirus
+oar:Ovis aries
+dmo:Drosophila mojavensis
+pol:Paralichthys olivaceus
+ola:Oryzias latipes
+mmu:Mus musculus
+hma:Hydra magnipapillata
+egr:Echinococcus granulosus
+aau:Acacia auriculiformis
+odi:Oikopleura dioica
+nlo:Nasonia longicornis
+pti:Phaeodactylum tricornutum
