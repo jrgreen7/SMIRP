@@ -24,7 +24,7 @@ call('python progs/HuntMi/progs/additional_features/translate.py data/'+inPath+'
 call('python progs/HuntMi/progs/additional_features/triplet.py data/'+inPath+'.fold data/'+inPath+'.triplet', shell=True)
 
 fs = FeatureSet()
-fs.load_micropred('data/'+inPath+'.micropred')
+fs.load('data/'+inPath+'.micropred')
 fs.add_features_from_micropred('data/'+inPath+".dustmasker")
 fs.add_features_from_micropred('data/'+inPath+'.triplet')
 fs.add_features_from_micropred('data/'+inPath+'.loops')

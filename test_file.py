@@ -18,8 +18,13 @@ for line in f:
 	if line[0] in 'ACGTUN':
 		for c in line[:-1]:
 			if c not in 'ACTGUN':
+				badChar = True
 				print "Invalid character on line", str(lineNum), ":", c
 	elif line[0] in '.()':
 		for c in line[:-1]:
 			if c not in '.()- 1234567890':
 				print "Invalid character on line", str(lineNum), ":", c
+				badChar = True
+
+if not badChar:
+	print "File is formatted correctly."
