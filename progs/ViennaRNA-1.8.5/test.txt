@@ -1,0 +1,10 @@
+UACACUGUGGAUCCGGUGAGGUAGUAGGUUGUAUAGUUUGGAAUAUUACCACCGGUGAAC
+............(((((..(((((((..(((.......)))..))))))))))))..... (-13.80)
+......,,....(((((..(((((((..((,.......})}..))))))))))))...,, [-15.32]
+............(((((..(((((((..((.........))..))))))))))))..... {-13.20 d=5.81}
+ frequency of mfe structure in ensemble 0.0851442; ensemble diversity 8.92  
+UAUGCAAUUUUCUACCUUACCGGAGAUACACUGUGGAUCCGGUGAGGUAGUAGGUUGUAUAGUUUGGAAUAUUACCACCGGUGAACUAUGCAAUUUUCUACCUUACCGGAGACAGAACUCUUCGA
+....................((((((....((((...(((((((((((((.((((((((((((((((..........))...)))))))))))))).))))))))))))).))))...)))))). (-49.00)
+....................((((((....((((...(((((((((((((.((((((((((((({,,.....,,{,...,}})))))))))))))).))))))))))))).))))...)))))). [-50.67]
+....................((((((....((((...(((((((((((((.(((((((((((((...................))))))))))))).))))))))))))).))))...)))))). {-46.81 d=5.54}
+ frequency of mfe structure in ensemble 0.0664412; ensemble diversity 8.42  

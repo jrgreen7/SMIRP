@@ -1,0 +1,119 @@
+	
+    --------------------------------------------------------------------------------------------------
+			HuntMi: an efficient and taxon-specific approach in pre-miRNA identification
+
+			Adam Gudys, Michal Wojciech Szczesniak, Marek Sikora and Izabela Makalowska
+    --------------------------------------------------------------------------------------------------
+
+	The basic functionality of HuntMi package to provide user with the possibility to identify real pre-miRNAs 
+	from a sequence set given in a FASTA file. This task is facilitated by two scripts:
+	- extractFeatures.py (extracts features from sequences in FASTA files and stores them in ARFF format),
+	- classify.py (generates predictions on the basis of ARFF files).
+	Additionally, HuntMi allows one to train new models on custom datasets with a use of Weka software.
+	Below one can find detailed descriptions of abovementioned actions.
+
+    --------------------------------------------------------------------------------------------------
+    							Feature extraction (extractFeatures.py script)
+    --------------------------------------------------------------------------------------------------
+ 
+    1. PURPOSE
+    extractFeatures.py takes one or two FASTA files provided by user and generates a set of features for each
+    sequence. The results are saved in ARFF format - .arff files - and can subsequently be used in HuntMi
+	classification engine or in Weka data mining tool for traning custom models or in classification experiments.
+
+    2. SYNTAX
+    There are two modes of action in HuntMi:
+        a) Generating features that are to be used in classification experiments using provided models for human, A. thaliana,
+           animals, plants, or viruses. Here, only one input file - with sequences to be tested - should be provided, for instance:
+
+           python extractFeatures.py test_file.fasta
+
+        b) Calculating features for positive and negative datasets that are further to be used to generate custom models.
+           In this situation two files need to be provided, first positive, then - negative one, as in the example:
+
+           python extractFeatures.py positive.fasta negative.fasta
+
+    3. INPUT
+    Input data should be in FASTA format, e.g.:
+
+    >sequence 1
+    CATAGACCTCTGCCAAAAGGAAAGTACACTGGATGAATGCCTGAGCTACCTCTGCAGGTGGATCCACTACAG
+    >sequence2
+    ATTTCTCAACTACATGGAAGCTGAACAACCTGCTCCTGAAAATGAAGGCATAAATAAAGATGTTCTTTGAAACTGA
+    >sequence3
+    ATCATATGCACATACGATCGATAGCTACACATCGTAGCATCTGTTTTTTTTTTGCTCCGGCCGTAGCAGCGCGCG
+
+    The input files are stored in /HuntMi/data directory.
+
+    4. OUTPUT
+    Result files are stored in /HuntMi/results
+
+    The results are in ARFF format.
+    For each input file two .arff files are generated: input_filename.arff and input_filename.filtered.arff, where filename
+    is user-provided name of the file. The first file contains the results for all sequences in the input_filename. However, 
+    it happens that some of the features cannot be calculated, e.g. when the sequence is too short. Then in input_filename.arff 
+    there are '?' signs instead of numbers. In input_filename.filtered.arff these cases are filtered out. Moreover, 
+    input_filename.removed file provides the user with FASTA sequences that failed the feature generation step.
+
+    There is also a directory created for each input file: /HuntMi/results/input_filename. The directory contains 7 files:
+        a) selected_21_micropred_features: 21 microPred features
+        b) input_filename.dustmasker: dm feature
+        c) input_filename.fold.triplet: tri_A, tri_U, tri_G, and tri_C features
+        d) input_filename.loops: loops feature
+        e) input_filename.translate: orf feature
+        f) input_filename.fold: secondary structures by RNAfold. 
+        g) input_filename.all_features: all features a) - e). These features are equivalent to input_filename.arff file.
+
+	5. KNOWN ISSUES
+	HuntMi package uses ViennaRNA library which is by default compiled for Perl 5.10. If one runs HuntMi on a system 
+	with older release of Perl, following error will occur:
+
+	perl: symbol lookup error: ./miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA.so: undefined symbol: Perl_Istack_sp_ptr
+ 
+	To solve this, please change name of HuntMi/progs/miPred/ViennaRNA-1.6.4/Perl/blib/arch/auto/RNA/RNA_old.so file to RNA.so.
+
+	--------------------------------------------------------------------------------------------------
+    								Classification (classify.py script)
+    --------------------------------------------------------------------------------------------------
+ 
+    1. PURPOSE
+    classify.py takes ARFF file with data representation (calculated by extractFeatures.py script) and
+	generates class labels for all sequences.
+
+    2. SYNTAX
+	python classify.py modelFile featuresFile    
+
+    3. INPUT
+	modelFile is a file containing classification model. It can be a model trained by the user in Weka software 
+	or one of the precomputed models:
+		human.model,
+		arabidopsis.model,
+		animal.model,
+		plant.model,
+		virus.model.
+	Model files are placed in HuntMi/classifier directory.
+	
+	featuresFile is an arff file with representation of sequences to be classified. This file is placed in 
+	HuntMi/results directory.
+
+    4. OUTPUT
+	Classifier predictions are stored in /HuntMi/results/featuresFile.predictions file. Each line corresponds to a single sequence and
+	contains 0, if sequence has been classified as non-miRNA, or 1, if sequence has been classified as miRNA.
+
+	--------------------------------------------------------------------------------------------------
+    										Model training
+    --------------------------------------------------------------------------------------------------
+
+	HuntMi package allows user to train models on custom datasets. This can be done with a help of Weka
+	data mining software (version 3.6.x is required). Please download ROCSelect.jar file from the webpage 
+	and add it to to the 'cp' variable in Weka/RunWeka.ini file. E.g. if ROCSelect.jar has been downloaded 
+	to Weka/plugins/subdirectory one should alter 'cp' variable in the following way:
+	
+	cp=%CLASSPATH%;./plugins/ROCSelect.jar
+	
+	After running the Weka software user can load a training dataset in ARFF format generated by extractFeatures.py script
+	(mode (b) should be used as class labels need to be written in ARFF file as well). Now one can go to classification
+	tab in Weka, choose ROCSelect procedure under weka/classifiers/meta category, configure all the parameters and train a new model. 
+	The model must be saved to /Huntmi/models folder. If one would like to use default ROCSelect parameters (the same as in HuntMi classifier) 
+	they can be found on the webpage in ROCSelect.config file.
+	
