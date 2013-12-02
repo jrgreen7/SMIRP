@@ -80,9 +80,9 @@ foreach $line (@file_data)
 
 	     system("RNAfold < $filename.fasta > $filename.fold"); 
              system("perl genRNAStats_mod.pl < $filename.fasta > $filename.stat2");
-	     system("perl genRNAStats.pl < $filename.fasta > $filename.data1");
+	     system("perl miPred/genRNAStats.pl < $filename.fasta > $filename.data1");
 	     system("./RNAtopological.exe < $filename.fold > $filename.spec");
-	     system("perl genRandomRNA.pl -n 50 -m d < $filename.fasta > $filename.random.fasta");
+	     system("perl miPred/genRandomRNA.pl -n 50 -m d < $filename.fasta > $filename.random.fasta");
 		system("RNAfold < $filename.random.fasta > $filename.random.fold"); 
 		system("rm *_ss.ps");
  	     system("perl genRNARandomStats_mod.pl -n 50 -i $filename.random.fold -o $filename.zdata -m $filename.fold");
