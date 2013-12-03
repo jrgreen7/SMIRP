@@ -78,12 +78,12 @@ foreach $line (@file_data)
 	     
    	     print("\n-calculating features-------------\n");
 
-	     system("RNAfold < $filename.fasta > $filename.fold"); 
+	     system("miPred/RNAfold < $filename.fasta > $filename.fold"); 
              system("perl genRNAStats_mod.pl < $filename.fasta > $filename.stat2");
 	     system("perl miPred/genRNAStats.pl < $filename.fasta > $filename.data1");
 	     system("./RNAtopological.exe < $filename.fold > $filename.spec");
 	     system("perl miPred/genRandomRNA.pl -n 50 -m d < $filename.fasta > $filename.random.fasta");
-		system("RNAfold < $filename.random.fasta > $filename.random.fold"); 
+		system("miPred/RNAfold < $filename.random.fasta > $filename.random.fold"); 
 		system("rm *_ss.ps");
  	     system("perl genRNARandomStats_mod.pl -n 50 -i $filename.random.fold -o $filename.zdata -m $filename.fold");
 	     $tempfile=">temp.txt";
@@ -98,7 +98,7 @@ foreach $line (@file_data)
    		system("java bpcount1_mod $filename");
                 #Count Percent of Trimer occurs in LongStem------------------------------- 
                 #system("perl trimerstemcount_2.pl < $filename.longstem > $filename.trimer");
-   		system("RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
+   		system("miPred/RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
    		system("java RNAfoldfilter $filename");
    		system("rm *.ps");
 		# system("rm $filename.fasta.37.ext");
