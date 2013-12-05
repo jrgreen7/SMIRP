@@ -98,7 +98,7 @@ foreach $line (@file_data)
    		system("java bpcount1_mod $filename");
                 #Count Percent of Trimer occurs in LongStem------------------------------- 
                 #system("perl trimerstemcount_2.pl < $filename.longstem > $filename.trimer");
-   		system("miPred/RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
+   		system("../ViennaRNA-1.8.5/Progs/RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
    		system("java RNAfoldfilter $filename");
    		system("rm *.ps");
 		# system("rm $filename.fasta.37.ext");
