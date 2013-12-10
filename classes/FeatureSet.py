@@ -26,7 +26,7 @@ class FeatureSet():
 		self.features.append(features)
 		self.classes.append(patternClass)
 
-	def get_subsets(self, numSets):
+	def get_cv_subsets(self, numSets):
 		subsets = []
 		numPos = self.classes.count('real')
 		numNeg = self.classes.count('pseudo')
@@ -79,6 +79,7 @@ class FeatureSet():
 	def weka_smote(self):
 		numPos = self.classes.count('real')
 		numNeg = self.classes.count('pseudo')
+		print "NumPos: ", numPos, "NumNeg:", numNeg
 		self.export_arff('tmp.arff')
 		call('java -Djava.util.Arrays.useLegacyMergeSort=true -classpath progs/weka-3-6-9/weka.jar weka.filters.supervised.instance.SMOTE -C 0 -K 5 -P '+str(((float(self.get_numneg())/float(self.get_numpos()))*100)-100)+' -S 1 -i tmp.arff -o tmpsmote.arff -c "last"', shell=True)
 		self.load_arff('tmpsmote.arff')
@@ -94,8 +95,9 @@ class FeatureSet():
 			self.load_svm(inPath)
 		if extension in ['features', 'micropred', 'huntmi']:
 			self.load_micropred(inPath, patternClass)
-		if extension in ['csv']:
+		if extension in ['csv', 'hmp', 'hmp20']:
 			self.load_csv(inPath)
+		print len(self.features)
 	def load_micropred(self, inPath, patternClass='real'):
 		self.classes = []
 		self.names = []
@@ -146,14 +148,25 @@ class FeatureSet():
 		self.names = []
 		self.features = []
 		lines = open(inPath, 'r').readlines()
+		# Check for a header line. If there is a header, use it for feature names
 		if lines[0][0] in '\"\'':
 			self.names = [s.strip('\"\' ') for s in lines[0].split(',')]
 			lines = lines[1:]
+		# If there is no header, generate default feature names
 		else:
-			self.names = ["feat"+str(i) for i in range(len(lines[0][:-1]))]
-			self.names.append('class')
-		for line in lines:
-			self.classes.append(line.split(',')[-1].strip('" \n'))
+			self.names = ["feat"+str(i) for i in range(len(lines[0].split(',')[:-1]))]
+			if lines[0].split(',')[-1].strip('" \n') in ['miRNA', 'real']:
+				self.classes.append('real')
+			else:
+				self.classes.append('pseudo')
+			# self.classes.append(line.split(',')[-1].strip('" \n'))
+			self.features.append(lines[0].split(',')[:-1])
+		for line in lines[1:]:
+			if line.split(',')[-1].strip('" \n') in ['miRNA', 'real']:
+				self.classes.append('real')
+			else:
+				self.classes.append('pseudo')
+			# self.classes.append(line.split(',')[-1].strip('" \n'))
 			self.features.append(line.split(',')[:-1])
 		return
 
@@ -168,7 +181,7 @@ class FeatureSet():
 			self.add_instances_from_svm(inPath)
 		if extension in ['features', 'micropred', 'huntmi']:
 			self.add_instances_from_micropred(inPath, patternClass)
-		if extension in ['csv']:
+		if extension in ['csv', 'hmp', 'hmp20']:
 			self.add_instances_from_csv(inPath)
 	def add_instances_from_micropred(self, inPath, patternClass='real'):
 		lines = open(inPath, 'r').readlines()
@@ -186,6 +199,16 @@ class FeatureSet():
 	def add_instances_from_svm(self, inPath):
 		return
 	def add_instances_from_csv(self, inPath):
+		lines = open(inPath, 'r').readlines()
+		if len(lines[0].split(',')) != len(self.features[0])+1:
+			print "Error adding instances to feature set: Expected", str(len(self.features[0])), "features, found", str(len(lines[0].split())), "."
+			return
+		if lines[0][0] not in "\'\"":
+			self.classes.append(lines[0].split(',')[-1].strip('" \n'))
+			self.features.append(lines[0].split(',')[:-1])
+		for line in lines[1:]:
+			self.classes.append(line.split(',')[-1].strip('" \n'))
+			self.features.append(line.split(',')[:-1])
 		return
 
 # #####################################################
@@ -199,7 +222,7 @@ class FeatureSet():
 			self.add_features_from_svm(inPath)
 		if extension in ['features', 'micropred', 'huntmi']:
 			self.add_features_from_micropred(inPath)
-		if extension in ['csv']:
+		if extension in ['csv', 'hmp', 'hmp20']:
 			self.add_features_from_csv(inPath)
 	def add_features_from_micropred(self, inPath):
 		lines = open(inPath, 'r').readlines()
@@ -232,7 +255,7 @@ class FeatureSet():
 			self.export_svm(outPath)
 		if extension in ['features', 'micropred', 'huntmi']:
 			self.export_micropred(outPath)
-		if extension in ['csv']:
+		if extension in ['csv', 'hmp', 'hmp20']:
 			self.export_csv(outPath)
 	def export_micropred(self, outPath):
 		with open(outPath, 'w') as outFile:
@@ -256,7 +279,7 @@ class FeatureSet():
 	def export_svm(self, outPath):
 		with open(outPath, 'w') as outFile:
 			for i in range(len(self.features)):
-				if self.classes[i] == 'real':
+				if self.classes[i] in ['real', 'miRNA']:
 					outFile.write('1 ')
 				else:
 					outFile.write('0 ')
@@ -276,6 +299,7 @@ class FeatureSet():
 				outFile.write('"'+self.classes[i]+'"\n')
 		return
 
+# Example usage
 # fs = FeatureSet()
 # fs.load("../data/dps_positive.fasta.huntmi", patternClass = 'real')
 # fs.add_instances("../data/dps_negative.fasta.huntmi", patternClass = 'pseudo')
