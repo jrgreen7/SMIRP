@@ -22,6 +22,26 @@ def remove_AU(inPath, outPath, numAUs):
 							outFile.write(header)
 							outFile.write(seq)
 
+def convert_DNA_to_RNA(inPath, outPath):
+	with open(inPath, 'r') as inFile:
+		with open(outPath, 'w') as outFile:
+			inFile.seek(0)
+			for line in inFile:
+				if line[0] == '>':
+					outFile.write(line)
+				else:
+					line=line.upper()
+					if 'U' in line:
+						outFile.write(line)
+					else:
+						line = line.replace('A','u')
+						line = line.replace('T','a')
+						line = line.replace('G','c')
+						line = line.replace('C','g')
+						line = line.upper()
+						line = line[::-1].strip()
+						outFile.write(line+'\n')
+
 def remove_newlines(inPath, outPath):
 	b = ''
 	with open(inPath, 'r') as inFile:
@@ -33,7 +53,7 @@ def remove_newlines(inPath, outPath):
 					outFile.write(line)
 					b = ''
 				else:
-					b += line[:-1]
+					b += line.strip()
 			if b != '\n':
 				outFile.write(b.strip())
 
@@ -44,13 +64,12 @@ def remove_newlines(inPath, outPath):
 # numOut: number of output files
 def split_fasta(inPath, numOut):
 	# Set lineCount to the number of lines in the input file
+	remove_newlines(inPath, inPath+'.tmp_fixed')
 
-	with open(inPath, 'r') as inFile:
+	with open(inPath+'.tmp_fixed', 'r') as inFile:
 		lineCount = 0
 		for line in inFile:
 			lineCount += 1
-
-	remove_newlines(inPath, inPath+'.tmp_fixed')
 
 	with open(inPath+'.tmp_fixed', 'r') as inFile:
 		for i in range(numOut-1):
@@ -66,10 +85,9 @@ def split_fasta(inPath, numOut):
 				title = 'X'
 				seq = 'X'
 				for lineNum in range(lineCount/numOut/2):
-					
 					while title[0] != '>':
 						title = inFile.readline()
-					while seq[0] not in 'AGTCU':
+					while seq[0] not in 'AGTCUN':
 						seq = inFile.readline()
 					outFile.write(title)
 					outFile.write(seq)
