@@ -6,12 +6,16 @@ import os.path
 import classes.FastaOperations as FastaOps
 import os
 
-opts, extraparams = getopt.getopt(sys.argv[1:], 'i:n:')
+patternClass = ''
+
+opts, extraparams = getopt.getopt(sys.argv[1:], 'i:n:c:')
 for o,p in opts:
 	if o == '-i':
 		inPath = p
 	if o == '-n':
 		numThreads = int(p)
+	if o == '-c':
+		patternClass = p
 
 class myThread(threading.Thread):
 	def __init__(self, inPath):
@@ -99,5 +103,8 @@ with open('data/'+inPath+'.hmp', 'r') as inFile:
 			features = line.split(',')
 			for index in featureIndices:
 				outFile.write(features[index]+',')
-			outFile.write(features[-1])
+			if patternClass == ''
+				outFile.write(features[-1])
+			else
+				outFile.write(patternClass)
 # call('rm progs/microPred/data/*', shell=True)
