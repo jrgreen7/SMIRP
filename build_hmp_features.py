@@ -8,6 +8,13 @@ import os
 
 patternClass = ''
 
+# ##########################################################
+# Parameters:
+# -i input fasta file. File must be present in the data directory.
+# -n Number of processor threads to be used by the program
+# -c Class of data (either 'miRNA' or 'pseudo')
+#
+############################################################
 opts, extraparams = getopt.getopt(sys.argv[1:], 'i:n:c:')
 for o,p in opts:
 	if o == '-i':
