@@ -26,6 +26,8 @@ fs.weka_smote()
 fs.libsvm_scale(paramOut = 'models/'+outPath+'.scale')
 fs.export('tmp.libsvm')
 # Build model
-call('svm-train -c 10000000 -d 1 -h 1 -e 0.001 -g 0.0019531 -b 1 tmp.libsvm models/'+outPath+'.model', shell=True)
+# Micropred: -c 100 -d 1 -h 1 -e 0.001 -g 0.0019531
+# HeteroMir: -c 1 -d 1 -h 1 -e 0.001 -g 0.06
+call('progs/libsvm-3.14/svm-train -c 1 -d 1 -h 1 -e 0.001 -g 0.06 -b 1 tmp.libsvm models/'+outPath+'.model', shell=True)
 # Clean up
 call('rm tmp.libsvm', shell=True)
