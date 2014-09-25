@@ -113,5 +113,5 @@ with open('data/'+inPath+'.hmp', 'r') as inFile:
 			if patternClass == '':
 				outFile.write(features[-1])
 			else:
-				outFile.write(patternClass)
+				outFile.write(patternClass+"\n")
 # call('rm progs/microPred/data/*', shell=True)
