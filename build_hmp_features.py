@@ -110,8 +110,8 @@ with open('data/'+inPath+'.hmp', 'r') as inFile:
 			features = line.split(',')
 			for index in featureIndices:
 				outFile.write(features[index]+',')
-			if patternClass == ''
+			if patternClass == '':
 				outFile.write(features[-1])
-			else
+			else:
 				outFile.write(patternClass)
 # call('rm progs/microPred/data/*', shell=True)
