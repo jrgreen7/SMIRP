@@ -1,7 +1,7 @@
 import string
 
 
-def filter_hairpins(inPath, outPath):
+def filter_hairpins(inPath, outPath, mfe=-15.00, numPairs=18):
 	with open(inPath, 'r') as fileIn:
 		with open(outPath, 'w') as out:
 			writeSeq = False
@@ -19,7 +19,7 @@ def filter_hairpins(inPath, outPath):
 					if '..' in line.split('(')[-1].split(')')[0]:
 						print line
 					# Restrictive Must-be-a-perfect-hairpin
-					elif float(line.split('(')[-1].split(')')[0]) <= -15.00 and line.count('(') > 18:
+					elif float(line.split('(')[-1].split(')')[0]) <= mfe and line.count('(') > numPairs:
 						writeFold = True
 						for s in fold.split(')')[1:]:
 							if '(' in s:

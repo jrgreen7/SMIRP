@@ -33,27 +33,24 @@ class myThread(threading.Thread):
 		with open(self.inPath, "r") as f:
 			fastaLines = f.readlines()
 
-			if os.path.exists("../data/selected."+self.inPath+".-21.features"):
-				prevLines = open("../data/selected."+self.inPath+".-21.features").readlines()
-			else:
-				prevLines = []
-
 			for i in range(1,len(fastaLines),2):
 				header = fastaLines[i-1]
-				seq = fastaLines[i]
-				if header not in prevLines:
-					with open("tmp_"+self.inPath, 'w') as tempOut:
-						tempOut.write(header+seq)
-					
-					call("perl HeteroMirPred.pl tmp_"+self.inPath, shell=True)
-					
-					with open("tmp_"+self.inPath+".csv", "r") as inFile:
-						with open(self.inPath+".csv", 'a') as finalOut:
-							inFile.readline()
-							features = inFile.readline()
-							if features != '':
-								finalOut.write(header)
-								finalOut.write(features)
+				seq = fastaLines[i].strip()
+				with open("tmp_"+self.inPath, 'w') as tempOut:
+					tempOut.write(header+seq)
+				
+				call("perl HeteroMirPred.pl tmp_"+self.inPath, shell=True)
+				
+				with open("tmp_"+self.inPath+".csv", "r") as inFile:
+					with open(self.inPath+".csv", 'a') as finalOut:
+						inFile.readline()
+						features = inFile.readline()
+						if "Other" in features:
+							exit()
+						if features != '':
+							finalOut.write(header)
+							finalOut.write(features)
+		call('rm *.ps', shell=True)
 
 ###########################################
 # Main script starts here
@@ -89,7 +86,7 @@ with open('progs/HeteroMirPred/'+inPath+'.csv', 'w') as finalOut:
 		with open('progs/HeteroMirPred/'+threadPath+'.'+str(i)+'.'+threadExt+'.csv', 'r') as finalIn:
 			for line in finalIn:
 				finalOut.write(line)
-		call('rm progs/HeteroMirPred/'+threadPath+'.'+str(i)+'.'+threadExt+'.csv', shell=True)
+		# call('rm progs/HeteroMirPred/'+threadPath+'.'+str(i)+'.'+threadExt+'.csv', shell=True)
 
 with open('data/'+inPath+'.hmp', 'w') as newOut:
 	with open('data/'+inPath+'.headers', 'w') as headerOut:
@@ -114,4 +111,4 @@ with open('data/'+inPath+'.hmp', 'r') as inFile:
 				outFile.write(features[-1])
 			else:
 				outFile.write(patternClass+"\n")
-# call('rm progs/microPred/data/*', shell=True)
+call('rm progs/HeteroMirPred/data/*.ps', shell=True)

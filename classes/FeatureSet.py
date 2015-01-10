@@ -155,13 +155,7 @@ class FeatureSet():
 		# If there is no header, generate default feature names
 		else:
 			self.names = ["feat"+str(i) for i in range(len(lines[0].split(',')[:-1]))]
-			if lines[0].split(',')[-1].strip('" \n') in ['miRNA', 'real']:
-				self.classes.append('real')
-			else:
-				self.classes.append('pseudo')
-			# self.classes.append(line.split(',')[-1].strip('" \n'))
-			self.features.append(lines[0].split(',')[:-1])
-		for line in lines[1:]:
+		for line in lines:
 			if line.split(',')[-1].strip('" \n') in ['miRNA', 'real']:
 				self.classes.append('real')
 			else:
@@ -283,7 +277,7 @@ class FeatureSet():
 					outFile.write('1 ')
 				else:
 					outFile.write('0 ')
-				for j in range(len(self.features[i])):
+				for j in range(len(self.features[i])-1):
 					if self.features[i][j] != '0.0':
 						outFile.write(str(j+1) + ':' +self.features[i][j]+' ')
 				outFile.write('\n')

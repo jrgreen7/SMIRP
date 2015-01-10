@@ -8,11 +8,9 @@ for o,p in opts:
 	if o == '-f':
 		outFormat = p
 
-inFormat = inPath.split('.')[-1]
-noFormatName = ""
-for text in inPath.split('.')[:-1]:
-	noFormatName += text
-	noFormatName += '.'
+inFormat = inPath.rsplit('.',1)[0]
+noFormatName = inPath.rsplit('.',1)[1]:
+
 outPath = noFormatName + outFormat
 
 if inFormat in ['micropred', 'features', 'huntmi', 'csv', 'svm', 'libsvm', 'arff']:

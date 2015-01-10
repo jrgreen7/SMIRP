@@ -6,12 +6,13 @@ import os.path
 import classes.FastaOperations as FastaOps
 import os
 
-opts, extraparams = getopt.getopt(sys.argv[1:], 'i:n:')
+opts, extraparams = getopt.getopt(sys.argv[1:], 'i:n:l:')
 for o,p in opts:
 	if o == '-i':
 		inPath = p
 	if o == '-n':
 		numThreads = int(p)
+
 
 class myThread(threading.Thread):
 	def __init__(self, inPath):

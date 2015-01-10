@@ -1,4 +1,5 @@
 from collections import namedtuple
+import random
 
 MiRNA = namedtuple('MiRNA', ['name', 'sequence', 'features'])
 
@@ -187,6 +188,9 @@ class MiRNADB:
 	mirna_list = []
 	encoder = SpeciesEncoder('mirna_species_code.txt')
 	hierarchy = SpeciesHierarchy()
+
+	def filter_random_results(self, numResults):
+		self.mirna_list = random.sample(self.mirna_list, numResults)
 
 	def filter_top_results(self, numResults):
 		self.mirna_list = self.mirna_list[:numResults]
