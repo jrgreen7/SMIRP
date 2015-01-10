@@ -20,8 +20,8 @@ stf = ScanningTestFramework()
 # stf.getValidMirnaHairpins('data/hsa_rna_regions.fasta.nr.hairpins', 'data/hsa_mirna_hp.15.18.75.fasta')
 # stf.paramScan("test_param_out", 87)
 # stf.setParams(-15.0, 18, 75)
-# stf.MPCorrelationMirna()
-stf.crossValidate('hsa_mirna_hp.15.18.75.fasta.micropred', 'hsa_coding_30k.15.18.75.fasta.micropred', 10)
+stf.MPCorrelationMirna()
+# stf.crossValidate('hsa_mirna_hp.15.18.75.fasta.micropred', 'hsa_coding_30k.15.18.75.fasta.micropred', 10)
 # 
 # def plot_roc(xvals, yvals, title):
 # 	plt.scatter(xvals, yvals)
