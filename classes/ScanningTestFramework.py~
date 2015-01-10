@@ -241,8 +241,7 @@ class ScanningTestFramework:
 								if r.t == '0':
 									spec -= 1.0 / testSet.get_numneg()
 								ssList.append((sens*self.hpSens, (1-spec)*self.hpSpec))
-								if (sens*self.hpSens+(1-spec)*self.ci*self.hpSpec) != 0:
-									prList.append((sens*self.hpSens/(sens*self.hpSens+(1-spec)*self.ci*self.hpSpec), sens*self.hpSens))
+								prList.append((sens*self.hpSens/(sens*self.hpSens+(1-spec)*self.ci*self.hpSpec), sens*self.hpSens))
 								rocOut.write(str(sens)+'\t'+str(1-spec)+'\n')
 								prOut.write(str(sens/(sens+spec*self.ci))+'\t'+str(sens)+'\n')
 
