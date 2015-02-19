@@ -6,11 +6,11 @@
 # VERSION:	1.0
 ############################################################################
 
-use lib "./miPred/ViennaRNA-1.6.4/Perl/blib/arch";
-use lib "./miPred/ViennaRNA-1.6.4/Perl/blib/lib";
-use lib "./miPred/Shuffle-1.4/blib/lib";
-use lib "./miPred/Statistics-Basic-0.41.3/blib/lib";
-use lib "./miPred/Shuffle-1.4/blib/lib";
+# use lib "./miPred/ViennaRNA-1.6.4/Perl/blib/arch";
+# use lib "./miPred/ViennaRNA-1.6.4/Perl/blib/lib";
+# use lib "./miPred/Shuffle-1.4/blib/lib";
+# use lib "./miPred/Statistics-Basic-0.41.3/blib/lib";
+# use lib "./miPred/Shuffle-1.4/blib/lib";
 
 use Algorithm::Numerical::Shuffle qw /shuffle/;
 use Statistics::Basic::StdDev;

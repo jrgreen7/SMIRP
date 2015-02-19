@@ -6,8 +6,8 @@
 # DESCRIPTION: Generates stats from fasta
 ############################################################################
 
-use lib "miPred/ViennaRNA-1.6.4/Perl/blib/arch";
-use lib "miPred/ViennaRNA-1.6.4/Perl/blib/lib";
+# use lib "miPred/ViennaRNA-1.6.4/Perl/blib/arch";
+# use lib "miPred/ViennaRNA-1.6.4/Perl/blib/lib";
 
 use warnings;
 use strict;

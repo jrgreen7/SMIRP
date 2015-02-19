@@ -26,8 +26,7 @@ import sys
 import random
 import commands
 
-VIENNA_ROOT = ''
-RNAFOLD = VIENNA_ROOT + 'RNAfold -noLP'
+RNAFOLD = 'RNAfold --noLP'
 RNAFOLD_CHUNK_SIZE = 250 #number of seqs to pass to RNAfold at once
 DEFAULT_N_CONTEXTS = 100
 DEFAULT_CONTEXT_PROP = 1.0

@@ -78,12 +78,12 @@ foreach $line (@file_data)
 	     
    	     print("\n-calculating features-------------\n");
 
-	     system("miPred/RNAfold < $filename.fasta > $filename.fold"); 
+	     system("RNAfold < $filename.fasta > $filename.fold"); 
              system("perl genRNAStats_mod.pl < $filename.fasta > $filename.stat2");
-	     system("perl miPred/genRNAStats.pl < $filename.fasta > $filename.data1");
+	     system("perl genRNAStats.pl < $filename.fasta > $filename.data1");
 	     system("./RNAtopological.exe < $filename.fold > $filename.spec");
 	     system("perl miPred/genRandomRNA.pl -n 50 -m d < $filename.fasta > $filename.random.fasta");
-		system("miPred/RNAfold < $filename.random.fasta > $filename.random.fold"); 
+		system("RNAfold < $filename.random.fasta > $filename.random.fold"); 
 		system("rm *_ss.ps");
  	     system("perl genRNARandomStats_mod.pl -n 50 -i $filename.random.fold -o $filename.zdata -m $filename.fold");
 	     $tempfile=">temp.txt";
@@ -98,7 +98,7 @@ foreach $line (@file_data)
    		system("java bpcount1_mod $filename");
                 #Count Percent of Trimer occurs in LongStem------------------------------- 
                 #system("perl trimerstemcount_2.pl < $filename.longstem > $filename.trimer");
-   		system("../ViennaRNA-1.8.5/Progs/RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
+   		system("RNAfold -p2 < $filename.fasta > $filename.RNAfold1");  
    		system("java RNAfoldfilter $filename");
    		system("rm *.ps");
 		# system("rm $filename.fasta.37.ext");
@@ -156,9 +156,9 @@ foreach $line (@file_data)
 
 }
 
-system("java -classpath \$CLASSPATH:weka.jar:libsvm.jar:mysql-connector-java-5.0.8-bin.jar weka.classifiers.meta.Vote -l Vote.model -T $filename.csv -p 0 > $filename.out");
+# system("java -classpath \$CLASSPATH:weka.jar:libsvm.jar:mysql-connector-java-5.0.8-bin.jar weka.classifiers.meta.Vote -l Vote.model -T $filename.csv -p 0 > $filename.out");
 
-system("clear");
+# system("clear");
 
 print("\n\nInput file: $filename; There are $num query sequences in the input file. \n");
 print("\n.... Completed Extracting All Features ....\n");
