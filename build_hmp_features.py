@@ -111,4 +111,7 @@ with open('data/'+inPath+'.hmp', 'r') as inFile:
 				outFile.write(features[-1])
 			else:
 				outFile.write(patternClass+"\n")
-call('rm progs/HeteroMirPred/data/*.ps', shell=True)
+call('rm progs/HeteroMirPred/*.csv', shell=True)
+call('rm progs/HeteroMirPred/*.fasta', shell=True)
+call('rm progs/HeteroMirPred/*.fa', shell=True)
+call('rm progs/HeteroMirPred/tmp_*', shell=True)
