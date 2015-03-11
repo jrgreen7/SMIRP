@@ -76,7 +76,7 @@ foreach $line (@file_data)
 	     open(OUTPUT, $fastaSeq);	
              print OUTPUT $temp;
 	     
-   	     print("\n-calculating features-------------\n");
+   	     # print("\n-calculating features-------------\n");
 
 	     system("RNAfold < $filename.fasta > $filename.fold"); 
              system("perl genRNAStats_mod.pl < $filename.fasta > $filename.stat2");
@@ -108,7 +108,7 @@ foreach $line (@file_data)
                 system ("./Conv.exe $filename.fasta $filename.f2 1");
 		system ("./Extract_PP.exe -f $filename.f2 -out $filename.Probpair");
 		system("java filter $filename"); 
-		print(" Features for sequence no. $num is Done ----------------------------\n");	
+		# print(" Features for sequence no. $num is Done ----------------------------\n");	
 		
 		my $statfilename= "$filename.feature";
 		
@@ -160,13 +160,13 @@ foreach $line (@file_data)
 
 # system("clear");
 
-print("\n\nInput file: $filename; There are $num query sequences in the input file. \n");
-print("\n.... Completed Extracting All Features ....\n");
-print("\nAll features extracted are written to the file: $filename.csv.");
+# print("\n\nInput file: $filename; There are $num query sequences in the input file. \n");
+# print("\n.... Completed Extracting All Features ....\n");
+# print("\nAll features extracted are written to the file: $filename.csv.");
 
-print("\n\n############ Prediction results by Heterogeneous Ensemble #############\n\n");
+# print("\n\n############ Prediction results by Heterogeneous Ensemble #############\n\n");
 
 
-system("grep 1 out1.txt | awk '{gsub(/+/,\" \")}; {print \"  Sequence no. \"\$1 \" predict as \" \$3  \" - with a probability of \"\$4 \n}' |head -n -1 ");
+# system("grep 1 out1.txt | awk '{gsub(/+/,\" \")}; {print \"  Sequence no. \"\$1 \" predict as \" \$3  \" - with a probability of \"\$4 \n}' |head -n -1 ");
 
 exit;
