@@ -1,0 +1,296 @@
+>Chromalveolata
+	>Heterokontophyta
+		Ectocarpus siliculosus (47 precursors, 73 mature) [EctsiV2]
+		Phytophthora infestans (1 precursors, 2 mature)
+		Phytophthora ramorum (2 precursors, 4 mature)
+		Phytophthora sojae (2 precursors, 4 mature)
+		Phaeodactylum tricornutum (13 precursors, 13 mature)
+>Metazoa
+	>Bilateria
+		>Deuterostoma
+			Xenoturbella bocki (8 precursors, 8 mature)
+			>Chordata
+				>Cephalochordata
+					Branchiostoma belcheri (118 precursors, 173 mature)
+					Branchiostoma floridae (156 precursors, 187 mature) [JGI2.0]
+				>Urochordata
+					Ciona intestinalis (348 precursors, 550 mature) [JGI2]
+					Ciona savignyi (27 precursors, 25 mature) [CSAV2.0]
+					Oikopleura dioica (66 precursors, 63 mature)
+				>Vertebrata
+					>Agnathostomata
+						Petromyzon marinus (244 precursors, 302 mature) [Petromyzon_marinus-7.0]
+					>Amphibia
+						Xenopus laevis (22 precursors, 21 mature)
+						Xenopus tropicalis (192 precursors, 178 mature) [JGI4.2]
+					>Aves
+						Gallus gallus (740 precursors, 994 mature) [Gallus-gallus-4.0]
+						Taeniopygia guttata (247 precursors, 334 mature) [taeGlu3.2.4]
+					>Mammalia
+						>Carnivora
+							Canis familiaris (502 precursors, 453 mature) [CanFam3.1]
+						>Lagomorpha
+							Oryctolagus cuniculus (12 precursors, 21 mature) [OryCun2.0]
+						>Laurasiatheria
+							Artibeus jamaicensis (19 precursors, 19 mature)
+							Equus caballus (715 precursors, 690 mature) [EquCab2.0]
+							Eptesicus fuscus (502 precursors, 435 mature) [EptFus1.0]
+						>Metatheria
+							Monodelphis domestica (460 precursors, 767 mature) [MonDom5]
+							Macropus eugenii (3 precursors, 3 mature)
+							Sarcophilus harrisii (64 precursors, 62 mature) [DEVIL7_0]
+						>Primates
+							>Atelidae
+								Ateles geoffroyi (60 precursors, 54 mature)
+								Lagothrix lagotricha (48 precursors, 45 mature)
+							>Cebidae
+								Saguinus labiatus (42 precursors, 40 mature)
+							>Cercopithecidae
+								Macaca mulatta (619 precursors, 914 mature) [CR_1.0]
+								Macaca nemestrina (74 precursors, 70 mature)
+								Pygathrix bieti (11 precursors, 9 mature)
+							>Hominidae
+								Gorilla gorilla (352 precursors, 357 mature) [GorGor3]
+								Homo sapiens (1881 precursors, 2588 mature) [GRCh38]
+								Pan paniscus (88 precursors, 83 mature)
+								Pongo pygmaeus (642 precursors, 660 mature) [PPYG2]
+								Pan troglodytes (655 precursors, 587 mature) [PanTro2.1.4]
+								Symphalangus syndactylus (11 precursors, 10 mature)
+							>Lemuridae
+								Lemur catta (16 precursors, 15 mature)
+						>Prototheria
+							Ornithorhynchus anatinus (396 precursors, 640 mature) [OANA5]
+						>Rodentia
+							Cricetulus griseus (200 precursors, 307 mature)
+							Mus musculus (1193 precursors, 1915 mature) [GRCm38]
+							Rattus norvegicus (495 precursors, 765 mature) [Rnor_5.0]
+						>Ruminantia
+							Bos taurus (808 precursors, 793 mature) [UMD3.1]
+							Capra hircus (267 precursors, 436 mature) [CHIR_1.0]
+							Ovis aries (106 precursors, 153 mature) [OARv3.1]
+						>Scandentia
+							Tupaia chinensis (177 precursors, 162 mature) [TupChi_1.0]
+						>Suina
+							Sus scrofa (382 precursors, 411 mature) [Sscrofa10.2]
+					>Pisces
+						Cyprinus carpio (134 precursors, 146 mature)
+						Danio rerio (346 precursors, 350 mature) [Zv9]
+						Fugu rubripes (131 precursors, 108 mature) [FUGU5]
+						Hippoglossus hippoglossus (40 precursors, 37 mature)
+						Ictalurus punctatus (281 precursors, 205 mature)
+						Oryzias latipes (168 precursors, 146 mature) [MEDAKA1]
+						Paralichthys olivaceus (20 precursors, 38 mature)
+						Salmo salar (371 precursors, 498 mature)
+						Tetraodon nigroviridis (132 precursors, 109 mature) [Tetraodon8]
+					>Sauria
+						Anolis carolinensis (282 precursors, 416 mature) [AnoCar2.0]
+						Ophiophagus hannah (198 precursors, 343 mature) [OphHan1.0]
+			>Echinodermata
+				Lytechinus variegatus (50 precursors, 49 mature)
+				Patiria miniata (49 precursors, 50 mature)
+				Strongylocentrotus purpuratus (63 precursors, 70 mature) [Spur3.1]
+			>Hemichordata
+				Saccoglossus kowalevskii (89 precursors, 114 mature) [Skow_1.1]
+		>Ecdysozoa
+			>Arthropoda
+				>Chelicerata
+					Ixodes scapularis (49 precursors, 49 mature) [Iscaw1]
+					Rhipicephalus microplus (24 precursors, 24 mature)
+					Tetranychus urticae (52 precursors, 92 mature)
+				>Crustacea
+					Daphnia pulex (44 precursors, 45 mature) [JGI1.0]
+					Marsupenaeus japonicus (5 precursors, 7 mature)
+				>Hexapoda
+					Aedes aegypti (101 precursors, 124 mature) [AaegL1]
+					Anopheles gambiae (66 precursors, 65 mature) [AgamP3]
+					Apis mellifera (254 precursors, 259 mature) [AMEL4.5]
+					Acyrthosiphon pisum (123 precursors, 103 mature) [Acyr_2.0]
+					Bombyx mori (487 precursors, 563 mature) [SILKDB2.0]
+					Culex quinquefasciatus (74 precursors, 93 mature) [CpipJ1]
+					Drosophila ananassae (76 precursors, 75 mature) [dana_r1.3_FB2010_03]
+					Drosophila erecta (81 precursors, 78 mature) [dere_r1.3_FB2010_02]
+					Drosophila grimshawi (82 precursors, 72 mature) [dgri_r1.3_FB2010_02]
+					Drosophila melanogaster (256 precursors, 466 mature) [BDGP5.0]
+					Drosophila mojavensis (71 precursors, 71 mature) [dmoj_r1.3_FB2010_02]
+					Drosophila persimilis (75 precursors, 69 mature) [dper_r1.3_FB2010_02]
+					Drosophila pseudoobscura (210 precursors, 273 mature) [dpse_r2.26_FB2012_01]
+					Drosophila sechellia (78 precursors, 76 mature) [dsec_r1.3_FB2010_02]
+					Drosophila simulans (135 precursors, 178 mature) [dsim_caf1]
+					Drosophila virilis (134 precursors, 237 mature) [FB2011_07]
+					Drosophila willistoni (77 precursors, 72 mature) [dwil_r1.3_FB2010_02]
+					Drosophila yakuba (76 precursors, 75 mature) [dyak_caf1]
+					Heliconius melpomene (92 precursors, 97 mature) [HelMel1.1]
+					Locusta migratoria (7 precursors, 14 mature)
+					Manduca sexta (98 precursors, 93 mature) [Msex1.0]
+					Nasonia giraulti (32 precursors, 32 mature)
+					Nasonia longicornis (28 precursors, 28 mature)
+					Nasonia vitripennis (53 precursors, 53 mature) [Nvit_2.0]
+					Plutella xylostella (133 precursors, 128 mature) [1.0]
+					Tribolium castaneum (220 precursors, 430 mature) [Tcas3.0]
+				>Mandibulata
+					Strigamia maritima (3 precursors, 4 mature)
+			>Nematoda
+				Ascaris suum (97 precursors, 189 mature)
+				Brugia malayi (115 precursors, 107 mature) [PRJNA10729_WB240]
+				Caenorhabditis brenneri (214 precursors, 152 mature) [C_brenneri-6.0.1b]
+				Caenorhabditis briggsae (175 precursors, 163 mature) [WS200]
+				Caenorhabditis elegans (250 precursors, 434 mature) [WBcel235]
+				Caenorhabditis remanei (157 precursors, 182 mature) [WS200]
+				Haemonchus contortus (188 precursors, 195 mature)
+				Pristionchus pacificus (354 precursors, 550 mature) [WS238]
+				Panagrellus redivivus (200 precursors, 394 mature) [Pred3]
+				Strongyloides ratti (106 precursors, 208 mature) [WTSIv4]
+		>Lophotrochozoa
+			>Annelida
+				Capitella teleta (129 precursors, 134 mature) [Capca1]
+			>Brachiopoda
+				Glottidia pyramidata (1 precursors, 1 mature)
+				Terebratulina retusa (1 precursors, 1 mature)
+			>Molusca
+				Haliotis rufescens (5 precursors, 5 mature)
+				Lottia gigantea (59 precursors, 64 mature) [Helro1]
+			>Nemertea
+				Cerebratulus lacteus (2 precursors, 2 mature)
+			>Platyhelminthes
+				Echinococcus granulosus (23 precursors, 26 mature) [WTSI240910]
+				Echinococcus multilocularis (22 precursors, 22 mature) [WTSI3]
+				Gyrodactylus salaris (60 precursors, 120 mature)
+				Schistosoma japonicum (56 precursors, 79 mature) [ASM15177v1]
+				Schistosoma mansoni (115 precursors, 225 mature) [WTSI5]
+				Schmidtea mediterranea (148 precursors, 257 mature) [WUSTL3.1]
+	>Cnidaria
+		Hydra magnipapillata (17 precursors, 20 mature)
+		Nematostella vectensis (141 precursors, 142 mature) [JGI1.0]
+	>Porifera
+		Amphimedon queenslandica (8 precursors, 16 mature)
+		Leucosolenia complicata (1 precursors, 1 mature)
+		Sycon ciliatum (1 precursors, 2 mature)
+>Mycetozoa
+	Dictyostelium discoideum (17 precursors, 20 mature) [DictyBase2009]
+>Viridiplantae
+	>Chlorophyta
+		Chlamydomonas reinhardtii (50 precursors, 86 mature) [CHLRE3.1]
+	>Coniferophyta
+		Cunninghamia lanceolata (4 precursors, 4 mature)
+		Picea abies (40 precursors, 41 mature)
+		Pinus densata (29 precursors, 29 mature)
+		Pinus taeda (35 precursors, 36 mature)
+	>Embryophyta
+		Physcomitrella patens (229 precursors, 280 mature) [JGI1.1]
+		Selaginella moellendorffii (58 precursors, 64 mature)
+	>Magnoliophyta
+		Amborella trichopoda (124 precursors, 129 mature) [AmTr_v1.0]
+		>eudicotyledons
+			>Araliaceae
+				Panax ginseng (29 precursors, 32 mature)
+			>Asteraceae
+				Cynara cardunculus (48 precursors, 57 mature)
+				Helianthus annuus (6 precursors, 7 mature)
+				Helianthus argophyllus (3 precursors, 3 mature)
+				Helianthus ciliaris (3 precursors, 3 mature)
+				Helianthus exilis (2 precursors, 2 mature)
+				Helianthus paradoxus (3 precursors, 3 mature)
+				Helianthus petiolaris (3 precursors, 3 mature)
+				Helianthus tuberosus (16 precursors, 16 mature)
+			>Brassicaceae
+				Arabidopsis lyrata (205 precursors, 384 mature) [v1.0]
+				Arabidopsis thaliana (325 precursors, 427 mature) [TAIR10]
+				Brassica napus (90 precursors, 92 mature) [BrassicaDB-20080411]
+				Brassica oleracea (10 precursors, 11 mature)
+				Brassica rapa (96 precursors, 157 mature) [Brapa_1.1]
+			>Caricaceae
+				Carica papaya (79 precursors, 81 mature)
+			>Cucurbitaceae
+				Cucumis melo (120 precursors, 120 mature)
+			>Euphorbiaceae
+				Hevea brasiliensis (31 precursors, 31 mature) [Hevbra_1.0]
+				Manihot esculenta (153 precursors, 153 mature) [Cassava4]
+				Ricinus communis (63 precursors, 63 mature) [TIGR0.1]
+			>Fabaceae
+				Acacia auriculiformis (7 precursors, 7 mature)
+				Arachis hypogaea (23 precursors, 32 mature)
+				Acacia mangium (3 precursors, 3 mature)
+				Glycine max (573 precursors, 639 mature) [v1.0]
+				Glycine soja (13 precursors, 13 mature)
+				Lotus japonicus (62 precursors, 67 mature) [lj2.5]
+				Medicago truncatula (672 precursors, 756 mature) [JCVI_Mt3.5.2]
+				Phaseolus vulgaris (8 precursors, 10 mature)
+				Vigna unguiculata (18 precursors, 18 mature)
+			>Lamiales
+				Avicennia marina (2 precursors, 3 mature)
+				Digitalis purpurea (13 precursors, 13 mature)
+				Rehmannia glutinosa (32 precursors, 37 mature)
+				Salvia sclarea (18 precursors, 18 mature)
+			>Linaceae
+				Linum usitatissimum (124 precursors, 124 mature)
+			>Malvaceae
+				Gossypium arboreum (1 precursors, 1 mature)
+				Gossypium herbaceum (1 precursors, 1 mature)
+				Gossypium hirsutum (78 precursors, 80 mature)
+				Gossypium raimondii (296 precursors, 296 mature) [Graimondii2_0]
+				Theobroma cacao (82 precursors, 82 mature)
+			>Ranunculaceae
+				Aquilegia caerulea (45 precursors, 45 mature)
+			>Rhizophoraceae
+				Bruguiera cylindrica (4 precursors, 4 mature)
+				Bruguiera gymnorhiza (4 precursors, 4 mature)
+			>Rosaceae
+				Malus domestica (206 precursors, 207 mature) [maldom-pseudo1.0]
+				Prunus persica (180 precursors, 214 mature) [Prupe1_0]
+			>Rutaceae
+				Citrus clementina (5 precursors, 5 mature)
+				Citrus reticulata (4 precursors, 4 mature)
+				Citrus sinensis (60 precursors, 64 mature)
+				Citrus trifoliata (6 precursors, 6 mature)
+			>Salicaceae
+				Populus euphratica (4 precursors, 4 mature)
+				Populus trichocarpa (352 precursors, 401 mature) [JGI_Poptr2.0]
+			>Solanaceae
+				Nicotiana tabacum (162 precursors, 164 mature)
+				Solanum lycopersicum (77 precursors, 110 mature) [SL2.40]
+				Solanum tuberosum (224 precursors, 343 mature) [SolTub3.0]
+			>Vitaceae
+				Vitis vinifera (163 precursors, 186 mature) [Genoscope-20100122]
+		>monocotyledons
+			Aegilops tauschii (88 precursors, 173 mature) [ASM34733v1]
+			Brachypodium distachyon (317 precursors, 525 mature) [Bd21]
+			Elaeis guineensis (6 precursors, 6 mature)
+			Festuca arundinacea (15 precursors, 15 mature)
+			Hordeum vulgare (69 precursors, 71 mature)
+			Oryza sativa (592 precursors, 713 mature) [MSU7]
+			Sorghum bicolor (205 precursors, 241 mature) [Sorbi1]
+			Saccharum officinarum (16 precursors, 16 mature)
+			Saccharum sp. (19 precursors, 20 mature)
+			Triticum aestivum (116 precursors, 119 mature)
+			Triticum turgidum (1 precursors, 1 mature)
+			Zea mays (172 precursors, 321 mature) [RefGen_v2]
+>Viruses
+	Bovine foamy virus (2 precursors, 4 mature)
+	Bovine herpesvirus 1 (10 precursors, 12 mature)
+	Bovine herpesvirus 5 (5 precursors, 5 mature)
+	BK polyomavirus (1 precursors, 2 mature)
+	Bovine leukemia virus (5 precursors, 10 mature) [K02120.1]
+	Bandicoot papillomatosis carcinomatosis virus type 1 (1 precursors, 1 mature)
+	Bandicoot papillomatosis carcinomatosis virus type 2 (1 precursors, 1 mature)
+	Duck enteritis virus (24 precursors, 33 mature)
+	Epstein Barr virus (25 precursors, 44 mature) [EMBL:AJ507799.2]
+	Herpes B virus (12 precursors, 15 mature) [Refseq:NC_004812]
+	Human cytomegalovirus (15 precursors, 26 mature) [EMBL:X17403.1]
+	Human herpesvirus 6B (4 precursors, 8 mature)
+	Human immunodeficiency virus 1 (3 precursors, 4 mature)
+	Herpes Simplex Virus 1 (18 precursors, 27 mature)
+	Herpes Simplex Virus 2 (18 precursors, 24 mature)
+	Herpesvirus saimiri strain A11 (3 precursors, 6 mature)
+	Herpesvirus of turkeys (17 precursors, 28 mature)
+	Infectious laryngotracheitis virus (7 precursors, 10 mature)
+	JC polyomavirus (1 precursors, 2 mature)
+	Kaposi sarcoma-associated herpesvirus (13 precursors, 25 mature) [EMBL:U75698.1]
+	Mouse cytomegalovirus (18 precursors, 29 mature)
+	Merkel cell polyomavirus (1 precursors, 2 mature)
+	Mareks disease virus type 1 (14 precursors, 26 mature) [EMBL:AF243438.1]
+	Mareks disease virus type 2 (18 precursors, 36 mature)
+	Mouse gammaherpesvirus 68 (15 precursors, 28 mature) [EMBL:U97553.1]
+	Pseudorabies virus (13 precursors, 13 mature)
+	Rhesus lymphocryptovirus (36 precursors, 68 mature)
+	Rhesus monkey rhadinovirus (7 precursors, 11 mature) [EMBL:AF210726.1]
+	Simian virus 40 (1 precursors, 2 mature)

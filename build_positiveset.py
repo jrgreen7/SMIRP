@@ -20,9 +20,8 @@ for o,p in opts:
 
 # Load up the mirbase database and clusters, export clustered features.
 mirdb = MiRNADB()
-mirdb.load_from_file('mirbase_19.mirdb')
-mirdb.remove_species('Drosophila melanogaster')
-mirdb.filter_by_cluster('mirbase_19.clus', inSpecies=species)
+mirdb.load_from_file('mirbase_21.mirdb')
+mirdb.filter_by_cluster('mirbase_21.clus', inSpecies=species)
 mirdb.filter_top_results(num)
 mirdb.export_features('data/'+outPath)
 mirdb.export_fasta('data/'+outPath+'.fasta')

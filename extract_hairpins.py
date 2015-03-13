@@ -70,12 +70,11 @@ for thread in threads:
 
 FastaOps.merge_fasta('data/tmp/'+inPath+'.rnanrhairpins', numThreads)
 FastaOps.remove_AU('data/tmp/'+inPath+'.rnanrhairpins', 'data/tmp/'+inPath+'.hairpins.noAU', 3)
-
-call('cp data/tmp/'+inPath+'.hairpins.noAU data/'+inPath+'.nr.hairpins', shell=True)
-
-if numHairpins != 0:
-	outFile = open('data/'+inPath+'.nr.hairpins.'+str(numHairpins), 'w')
-	inLines = open('data/'+inPath+'.nr.hairpins', 'r').readlines()
+if numHairpins == 0:
+	call('cp data/tmp/'+inPath+'.hairpins.noAU data/'+inPath+'.nr.hairpins', shell=True)
+else:
+	outFile = open('data/'+inPath+'.nr.hairpins', 'w')
+	inLines = open('data/tmp/'+inPath+'.hairpins.noAU', 'r').readlines()
 	inData = []
 	for i in range(0,len(inLines)-2,2):
 		inData.append(inLines[i]+inLines[i+1])
@@ -86,9 +85,6 @@ if numHairpins != 0:
 		outData = inData
 	for d in outData:
 		outFile.write(d)
-
-
-
 
 print "DONE!"
 

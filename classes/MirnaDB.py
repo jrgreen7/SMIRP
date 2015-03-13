@@ -66,7 +66,7 @@ class SeqClusters:
 					filteredLens = []
 					for classNum in range(len(species)):
 						for j in range(len(self.clusters[i])):
-							if self.clusters[i][j][1:4] in species[classNum]:
+							if self.clusters[i][j].split('-')[0][1:] in species[classNum]:
 								filteredCluster.append(self.clusters[i][j])
 								filteredLens.append(self.lens[i][j])
 						if len(filteredCluster) > 0:
@@ -85,7 +85,7 @@ class SpeciesHierarchy:
 	root = PhyloTree("Root")
 
 	def __init__(self):
-		self.build_hierarchy("mirbase_hierarchy.txt")
+		self.build_hierarchy("mirbase_hierarchy_21.txt")
 
 	def print_tree(self):
 		self.print_tree_recurse(self.root, 0)
@@ -186,7 +186,7 @@ def filter_fasta(svmPath, labelsPath, repsPath, outPath):
 
 class MiRNADB:
 	mirna_list = []
-	encoder = SpeciesEncoder('mirna_species_code.txt')
+	encoder = SpeciesEncoder('mirna_species_code_21.txt')
 	hierarchy = SpeciesHierarchy()
 
 	def filter_random_results(self, numResults):
